@@ -1,0 +1,87 @@
+import React, { Component } from 'react';
+import { Card, Pill, Tag } from '@contentful/forma-36-react-components';
+import ReactJson from 'react-json-view'
+import { locations } from 'contentful-ui-extensions-sdk';
+export interface AppInstallationParameters { }
+
+interface ConfigProps {
+  sdk: any;
+}
+
+interface ConfigState {
+  location: any
+}
+
+
+export default class SdkLocation extends Component<ConfigProps, ConfigState> {
+  constructor(props: any) {
+    super(props);
+    this.state = { location: '' }
+  }
+
+  async componentDidMount() {
+    if(this.props.sdk.location.is(locations.LOCATION_APP_CONFIG)){
+      this.setState({location:'locations.LOCATION_APP_CONFIG'})
+    }
+    if(this.props.sdk.location.is(locations.LOCATION_DIALOG)){
+      this.setState({location:'locations.LOCATION_DIALOG'})
+    }
+    if(this.props.sdk.location.is(locations.LOCATION_ENTRY_EDITOR)){
+      this.setState({location:'locations.LOCATION_ENTRY_EDITOR'})
+    }
+    if(this.props.sdk.location.is(locations.LOCATION_ENTRY_FIELD)){
+      this.setState({location:'locations.LOCATION_ENTRY_FIELD'})
+    }
+    if(this.props.sdk.location.is(locations.LOCATION_ENTRY_FIELD_SIDEBAR)){
+      this.setState({location:'locations.LOCATION_ENTRY_FIELD_SIDEBAR'})
+    }
+    if(this.props.sdk.location.is(locations.LOCATION_PAGE)){
+      this.setState({location:'locations.LOCATION_PAGE'})
+    }
+ 
+
+    // switch (this.props.sdk.location) {
+    //   case locations.LOCATION_APP_CONFIG:
+    //     this.setState({ location: 'locations.LOCATION_APP_CONFIG' })
+    //     break;
+    //   case locations.LOCATION_DIALOG:
+    //     this.setState({ location: 'locations.LOCATION_DIALOG' })
+    //     break;
+    //   case locations.LOCATION_ENTRY_EDITOR:
+    //     this.setState({ location: 'locations.LOCATION_ENTRY_EDITOR' })
+    //     break;
+    //   case locations.LOCATION_ENTRY_FIELD:
+    //     this.setState({ location: 'locations.LOCATION_ENTRY_FIELD' })
+    //     break;
+    //   case locations.LOCATION_ENTRY_FIELD_SIDEBAR:
+    //     this.setState({ location: 'locations.LOCATION_ENTRY_FIELD_SIDEBAR' })
+    //     break;
+    //   case locations.LOCATION_PAGE:
+    //     this.setState({ location: 'locations.LOCATION_PAGE' })
+    //     break;
+    // }
+
+    console.log('location',this.state.location)
+  }
+
+  render() {
+    return (
+      <>
+        <Card>
+          <Tag tagType="primary">sdk.location</Tag>
+          <br />
+          <br />
+
+          <Pill label="sdk.location.is"/>
+                    <div>
+                        {this.state.location}
+                    </div>
+        </Card>
+     
+      </>
+    )
+  }
+
+}
+
+
