@@ -5,6 +5,7 @@ import SdkEditor from '../sdk components/SdkEditor'
 import SdkEntry from '../sdk components/SdkEntry'
 import SdkContentType from '../sdk components/SdkContentType'
 import SdkParams from '../sdk components/SdkParams'
+import SdkDialog from '../sdk components/SdkDialog'
 import { Card,Icon,Heading } from '@contentful/forma-36-react-components';
 interface EditorProps {
   sdk: EditorExtensionSDK;
@@ -30,6 +31,7 @@ export default class EditorScreen extends Component<EditorProps> {
       <SdkEntry sdk={this.props.sdk}/>
       <SdkContentType sdk={this.props.sdk}/>
       <SdkParams sdk={this.props.sdk}/>
+      <SdkDialog sdk={this.props.sdk}/>
     </Card>
     </>)
 

@@ -7,6 +7,7 @@ import SdkEntry from '../sdk components/SdkEntry'
 import SdkContentType from '../sdk components/SdkContentType'
 import SdkParams from '../sdk components/SdkParams'
 import SdkField from '../sdk components/SdkField'
+import SdkDialog from '../sdk components/SdkDialog'
 import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
 
 
@@ -108,6 +109,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
         <SdkEntry sdk={this.props.sdk}/>
         <SdkContentType sdk={this.props.sdk}/>
         <SdkParams sdk={this.props.sdk}/>
+        <SdkDialog sdk={this.props.sdk}/>
 
         {/* <Pill label="sdk.field.onValueChanged" />
         <TextInput
