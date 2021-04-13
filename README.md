@@ -4,8 +4,14 @@ The application contains helps user to explore the functionality of the Contentf
 
 ## Installation
 
-~
+```sh
+$ npm install
+```
 
-npm install
 
-~
+## Workshop notes
+### Config screen
+### Field screen
+### Editor screen
+### Page screen
+### Dialog screen
