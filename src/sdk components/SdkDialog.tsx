@@ -35,8 +35,9 @@ export default class SdkDialog extends Component<ConfigProps,ConfigState> {
         this.props.sdk.dialogs.openCurrentApp({
           id:'dialog',
           width:1000,
-          height:1000,
           shouldCloseOnEscapePress:true,
+          allowHeightOverflow:true,
+          minHeight:500,
           parameters:{test:'test',value:42}
         }).then((data:any) =>{
           console.log(data)
@@ -47,8 +48,9 @@ export default class SdkDialog extends Component<ConfigProps,ConfigState> {
         this.props.sdk.dialogs.openCurrent({
           id:'dialog',
           width:1000,
-          height:1000,
+          minHeight:500,
           shouldCloseOnEscapePress:true,
+          allowHeightOverflow:true,
           parameters:{test:'test',value:42}
         }).then((data:any) =>{
           console.log(data)
