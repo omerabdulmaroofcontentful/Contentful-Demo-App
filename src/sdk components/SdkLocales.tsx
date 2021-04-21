@@ -7,14 +7,22 @@ export interface AppInstallationParameters { }
 interface ConfigProps {
     sdk: any;
   }
+
+  interface ConfigState {
+    defaultLocale: any;
+  }
   
 
-export default class SdkLocales extends Component<ConfigProps> {
+export default class SdkLocales extends Component<ConfigProps,ConfigState> {
      constructor(props: any) {
         super(props);
-
+        this.state = {defaultLocale:{}}
+  
       }
       
+      async componentDidMount(){
+        this.setState({defaultLocale:{'defaulLocale':this.props.sdk.locales.default}})
+      }
 
       render(){
         return(
@@ -26,7 +34,7 @@ export default class SdkLocales extends Component<ConfigProps> {
 
                     <Pill label="sdk.locales.default"/>
                     <div>
-                      <ReactJson src={this.props.sdk.locales.default} collapsed={0}/>
+                      <ReactJson src={this.state.defaultLocale} collapsed={0}/>
                    </div>
 
                    <Pill label="sdk.locales.available"/>
