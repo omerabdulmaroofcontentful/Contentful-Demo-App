@@ -11,6 +11,7 @@ import SdkDialog from '../sdk components/SdkDialog'
 import SdkNavigator from '../sdk components/SdkNavigator'
 import SdkIds from '../sdk components/SdkIds'
 import SdkUser from '../sdk components/SdkUser'
+import SdkLocales from '../sdk components/SdkLocales'
 import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
 
 
@@ -116,21 +117,8 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
         <SdkNavigator sdk={this.props.sdk}/>
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
+        <SdkLocales sdk={this.props.sdk}/>
         
-        
-
-        {/* <Pill label="sdk.field.onValueChanged" />
-        <TextInput
-          name="example"
-          type="text"
-          value={this.state.value}
-          onChange={this.onChange}
-        /> */}
-        {/* <Pill label="sdk.parameters.instance" />
-        <TextInput value={this.state.instanceParams}></TextInput>
-
-        <Pill label="sdk.parameters.installation" />
-        <TextInput value={this.state.installationParams}></TextInput> */}
       </Card>
     </>
     )
