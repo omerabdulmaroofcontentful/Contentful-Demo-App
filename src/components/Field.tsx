@@ -9,6 +9,8 @@ import SdkParams from '../sdk components/SdkParams'
 import SdkField from '../sdk components/SdkField'
 import SdkDialog from '../sdk components/SdkDialog'
 import SdkNavigator from '../sdk components/SdkNavigator'
+import SdkIds from '../sdk components/SdkIds'
+import SdkUser from '../sdk components/SdkUser'
 import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
 
 
@@ -112,6 +114,9 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
         <SdkParams sdk={this.props.sdk}/>
         <SdkDialog sdk={this.props.sdk}/>
         <SdkNavigator sdk={this.props.sdk}/>
+        <SdkIds sdk={this.props.sdk}/>
+        <SdkUser sdk={this.props.sdk}/>
+        
         
 
         {/* <Pill label="sdk.field.onValueChanged" />
