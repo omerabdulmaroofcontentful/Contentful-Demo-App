@@ -12,6 +12,7 @@ import SdkNavigator from '../sdk components/SdkNavigator'
 import SdkIds from '../sdk components/SdkIds'
 import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
+import SdkSpace from '../sdk components/SdkSpace'
 import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
 
 
@@ -118,6 +119,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
         <SdkLocales sdk={this.props.sdk}/>
+        <SdkSpace sdk={this.props.sdk}/>
         
       </Card>
     </>
