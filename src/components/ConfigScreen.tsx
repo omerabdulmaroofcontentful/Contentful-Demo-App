@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { AppExtensionSDK } from 'contentful-ui-extensions-sdk';
-import SdkLocation from '../sdk components/SdkLocation'
 import 'jsoneditor-react/es/editor.min.css';
 import {Pill,Card,Icon, Heading, Form, Workbench, Paragraph, Tabs, Tab,TextField  } from '@contentful/forma-36-react-components';
-import SdkApp from '../sdk components/SdkApp'
 import JSONInput from 'react-json-editor-ajrm';
 import locale    from 'react-json-editor-ajrm/locale/en';
-import {darktheme,light_mitsuketa_tribute}    from 'react-json-editor-ajrm/themes';
-
-import { JsonEditor as Editor } from 'jsoneditor-react';
-import 'jsoneditor-react/es/editor.min.css';
+import SdkLocation from '../sdk components/SdkLocation'
+import SdkApp from '../sdk components/SdkApp'
+import SdkContentType from '../sdk components/SdkContentType'
 import SdkParams from '../sdk components/SdkParams'
-import { css } from 'emotion';
-import { iconColors } from '@contentful/forma-36-react-components/dist/components/Icon/constants';
-
+import SdkDialog from '../sdk components/SdkDialog'
+import SdkNavigator from '../sdk components/SdkNavigator'
+import SdkIds from '../sdk components/SdkIds'
+import SdkUser from '../sdk components/SdkUser'
+import SdkLocales from '../sdk components/SdkLocales'
+import SdkSpace from '../sdk components/SdkSpace'
 
 export interface AppInstallationParameters { }
 
@@ -120,14 +120,16 @@ export default class Config extends Component<ConfigProps, ConfigState> {
   render() {
     return (
       <>
-       <Card>
-       <SdkLocation sdk={this.props.sdk}/>
-       <Card>
+     
+   
        <div className="flexbox-container">
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_APP_CONFIG</Heading>
         </div>
-      
+
+        <SdkLocation sdk={this.props.sdk}/>
+
+        <Card>
         <Pill label="app.onConfigure(cb): void"/>
         <br />
         <br />
@@ -178,12 +180,16 @@ export default class Config extends Component<ConfigProps, ConfigState> {
                   primitive:'#0C141C'
                 }}
         />
-
-        </Card>
+       </Card>
        
         <SdkApp sdk={this.props.sdk}/>
-
-       </Card>
+        <SdkParams sdk={this.props.sdk}/>
+        <SdkDialog sdk={this.props.sdk}/>
+        <SdkNavigator sdk={this.props.sdk}/>
+        <SdkIds sdk={this.props.sdk}/>
+        <SdkUser sdk={this.props.sdk}/>
+        <SdkLocales sdk={this.props.sdk}/>
+        <SdkSpace sdk={this.props.sdk}/>          
       </>
     );
   }
