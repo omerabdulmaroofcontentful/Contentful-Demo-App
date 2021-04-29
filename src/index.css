@@ -10,6 +10,10 @@ div {
 
 }
 
+.normalButton {
+  width: "100px"
+}
+
 .flexbox-container {
   display: flex;
   flex-direction: row;

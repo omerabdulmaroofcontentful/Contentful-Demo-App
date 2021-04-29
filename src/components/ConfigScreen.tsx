@@ -6,7 +6,6 @@ import JSONInput from 'react-json-editor-ajrm';
 import locale    from 'react-json-editor-ajrm/locale/en';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkApp from '../sdk components/SdkApp'
-import SdkContentType from '../sdk components/SdkContentType'
 import SdkParams from '../sdk components/SdkParams'
 import SdkDialog from '../sdk components/SdkDialog'
 import SdkNavigator from '../sdk components/SdkNavigator'
@@ -81,7 +80,6 @@ export default class Config extends Component<ConfigProps, ConfigState> {
 
   onConfigure = async () => {
 
-    console.log('onConfigure',JSON.stringify(this.state.parameters))
     return {
       parameters: this.state.parameters,
       targetState: this.state.targetState

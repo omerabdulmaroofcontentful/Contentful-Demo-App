@@ -32,8 +32,3 @@ export default class DialogScreen extends Component<DialogProps, ConfigState> {
   }
 }
 
-{/* // const Dialog = (props: DialogProps) => {
-//   return <Paragraph>Hello Dialog Component</Paragraph>;
-// };
-
-// export default Dialog; */}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Button,Card,Tag,Pill } from '@contentful/forma-36-react-components';
-import ReactJson from 'react-json-view'
+import '../../src/index.css';
 
 export interface AppInstallationParameters { }
 
@@ -85,18 +85,13 @@ export default class SdkDialog extends Component<ConfigProps,ConfigState> {
                       <Tag tagType="primary">sdk.dialogs</Tag>
                                 <br />
                                 <br />
-                        {/* <Pill label="sdk.dialogs.openExtension" />
+                  
                         <div>
-                          <Button onClick={this.openExtension}>sdk.dialogs.openExtension</Button>
-                        </div> */}
-
-                        {/* <Pill label="sdk.dialogs.openCurrentApp" /> */}
-                        <div>
-                          <Button onClick={this.openCurrentApp}>sdk.dialogs.openCurrentApp</Button>
+                          <Button className="normalButton" onClick={this.openCurrentApp}>sdk.dialogs.openCurrentApp</Button>
                         </div>
                         <br />
                         <div>
-                          <Button onClick={this.openCurrent}>sdk.dialogs.openCurrent</Button>
+                          <Button className="normalButton" onClick={this.openCurrent}>sdk.dialogs.openCurrent</Button>
                         </div>
                         <br />
                         <div>
