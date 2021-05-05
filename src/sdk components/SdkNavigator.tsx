@@ -69,32 +69,32 @@ export default class SdkNavigator extends Component<ConfigProps,ConfigState> {
                                 <br />
                         <div>
                              <TextField  name="entryId" id="entryId" labelText="Entry id" helpText="Please provide entry id" onChange={this.onTextChange} value={this.state.entryId}></TextField>
-                             <Button onClick={this.openEntry}>navigator.openEntry(entryId, options)</Button>
+                             <Button className="normalButton" onClick={this.openEntry}>navigator.openEntry(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
                             <TextField  name="asset" id="assetId" labelText="Asset id" helpText="Please provide asset id" onChange={this.onTextChange} value={this.state.assetId}></TextField>
-                             <Button onClick={this.openAsset}>navigator.openAsset(entryId, options)</Button>
+                             <Button className="normalButton" onClick={this.openAsset}>navigator.openAsset(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
                              <TextField  name="entryId" id="newEntryId" labelText="Content Type Id" helpText="Please provide Content Type Id" onChange={this.onTextChange} value={this.state.entryId}></TextField>
-                             <Button onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
+                             <Button className="normalButton" onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                             <Button onClick={this.openNewAsset}>navigator.openNewAsset(options)</Button>
+                             <Button className="normalButton" onClick={this.openNewAsset}>navigator.openNewAsset(options)</Button>
                         </div>
                         <br />
                         <div>
-                             <Button onClick={this.openCurrentAppPage}>navigator.openCurrentAppPage()</Button>
+                             <Button className="normalButton" onClick={this.openCurrentAppPage}>navigator.openCurrentAppPage()</Button>
                         </div>
                         <br />
                         <div>
-                             <Button onClick={this.openAppConfig}>navigator.openAppConfig()</Button>
+                             <Button className="normalButton" onClick={this.openAppConfig}>navigator.openAppConfig()</Button>
                         </div>
                     
                     </Card>

@@ -95,11 +95,11 @@ export default class SdkDialog extends Component<ConfigProps,ConfigState> {
                         </div>
                         <br />
                         <div>
-                          <Button onClick={this.openAlert}>sdk.dialogs.openAlert</Button>
+                          <Button className="normalButton" onClick={this.openAlert}>sdk.dialogs.openAlert</Button>
                         </div>
                         <br />
                         <div>
-                          <Button onClick={this.openConfirm}>sdk.dialogs.openConfirm</Button>
+                          <Button className="normalButton" onClick={this.openConfirm}>sdk.dialogs.openConfirm</Button>
                         </div>
                     </Card>
             </>
