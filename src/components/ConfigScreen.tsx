@@ -47,7 +47,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
   constructor(props: any) {
     super(props);
     this.state = { parameters: {},targetState:{}}; 
-
+    console.log('constructor')
     props.sdk.app.onConfigure(() => this.onConfigure());
     this.onParamChange = this.onParamChange.bind(this)
   }
@@ -68,6 +68,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
   async componentDidMount() {
     // Get current parameters of the app.
     // If the app is not installed yet, `parameters` will be `null`.
+    console.log('componentDidMount')
     const parameters:any = await this.props.sdk.app.getParameters();
     const currentState:any = await this.props.sdk.app.getCurrentState();
     if(parameters){
@@ -80,10 +81,17 @@ export default class Config extends Component<ConfigProps, ConfigState> {
 
   onConfigure = async () => {
 
+    console.log('onConfigure')
+    
+    setTimeout(function(){
+      window.location.reload()
+    },2000)
+
     return {
       parameters: this.state.parameters,
       targetState: this.state.targetState
     };
+
   };
 
   parametersValueChanged = async (result:any) => {
