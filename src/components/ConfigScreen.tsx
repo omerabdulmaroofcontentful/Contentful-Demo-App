@@ -13,6 +13,7 @@ import SdkIds from '../sdk components/SdkIds'
 import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
 import SdkSpace from '../sdk components/SdkSpace'
+import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
 
 export interface AppInstallationParameters { }
 
@@ -194,7 +195,8 @@ export default class Config extends Component<ConfigProps, ConfigState> {
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
         <SdkLocales sdk={this.props.sdk}/>
-        <SdkSpace sdk={this.props.sdk}/>  
+        <SdkSpace sdk={this.props.sdk}/> 
+        <ThirdPartyAPI sdk={this.props.sdk}/> 
       </div>
            
       </>

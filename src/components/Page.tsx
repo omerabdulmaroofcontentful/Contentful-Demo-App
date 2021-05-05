@@ -17,6 +17,7 @@ import SdkNavigator from '../sdk components/SdkNavigator'
 import SdkIds from '../sdk components/SdkIds'
 import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
+import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
 
 interface PageProps {
   sdk: PageExtensionSDK;
@@ -51,7 +52,8 @@ export default class Page extends Component<PageProps>{
           <SdkNavigator sdk={this.props.sdk}/>
           <SdkIds sdk={this.props.sdk}/>
           <SdkUser sdk={this.props.sdk}/>
-          <SdkLocales sdk={this.props.sdk}/>      
+          <SdkLocales sdk={this.props.sdk}/>
+          <ThirdPartyAPI sdk={this.props.sdk}/>      
         </Card>
       </div>
       </>

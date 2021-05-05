@@ -10,6 +10,7 @@ import SdkNavigator from '../sdk components/SdkNavigator'
 import SdkIds from '../sdk components/SdkIds'
 import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
+import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
 import { Card,Icon,Heading } from '@contentful/forma-36-react-components';
 interface EditorProps {
   sdk: EditorExtensionSDK;
@@ -41,6 +42,7 @@ export default class EditorScreen extends Component<EditorProps> {
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
         <SdkLocales sdk={this.props.sdk}/>
+        <ThirdPartyAPI sdk={this.props.sdk}/>
       </Card>
     </div>
     </>)
