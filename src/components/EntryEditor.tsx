@@ -25,22 +25,24 @@ export default class EditorScreen extends Component<EditorProps> {
 
   render() {
     return (<>
-    <Card>
-       <div className="flexbox-container">
-        <Icon icon="ReceiptTrimmed" size="large"/>
-        <Heading>LOCATION_ENTRY_EDITOR</Heading>
-       </div>
-      <SdkLocation sdk={this.props.sdk}/>
-      <SdkEditor sdk={this.props.sdk}/>
-      <SdkEntry sdk={this.props.sdk}/>
-      <SdkContentType sdk={this.props.sdk}/>
-      <SdkParams sdk={this.props.sdk}/>
-      <SdkDialog sdk={this.props.sdk}/>
-      <SdkNavigator sdk={this.props.sdk}/>
-      <SdkIds sdk={this.props.sdk}/>
-      <SdkUser sdk={this.props.sdk}/>
-      <SdkLocales sdk={this.props.sdk}/>
-    </Card>
+    <div className="center-aligned-editor">
+      <Card>
+        <div className="flexbox-container">
+          <Icon icon="ReceiptTrimmed" size="large"/>
+          <Heading>LOCATION_ENTRY_EDITOR</Heading>
+        </div>
+        <SdkLocation sdk={this.props.sdk}/>
+        <SdkEditor sdk={this.props.sdk}/>
+        <SdkEntry sdk={this.props.sdk}/>
+        <SdkContentType sdk={this.props.sdk}/>
+        <SdkParams sdk={this.props.sdk}/>
+        <SdkDialog sdk={this.props.sdk}/>
+        <SdkNavigator sdk={this.props.sdk}/>
+        <SdkIds sdk={this.props.sdk}/>
+        <SdkUser sdk={this.props.sdk}/>
+        <SdkLocales sdk={this.props.sdk}/>
+      </Card>
+    </div>
     </>)
 
   }

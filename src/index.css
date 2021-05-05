@@ -7,11 +7,23 @@ div {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-
+  align-content: center;
 }
 
+
+
 .normalButton {
-  width: 400px
+  width: 380px
+}
+
+.center-aligned{
+  width: 30%;
+  margin:0 auto;
+}
+
+.center-aligned-editor{
+  width: 50%;
+  margin:0 auto;
 }
 
 .flexbox-container {

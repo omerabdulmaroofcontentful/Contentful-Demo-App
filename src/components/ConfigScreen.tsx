@@ -86,7 +86,6 @@ export default class Config extends Component<ConfigProps, ConfigState> {
     setTimeout(function(){
       window.location.reload()
     },2000)
-
     return {
       parameters: this.state.parameters,
       targetState: this.state.targetState
@@ -127,8 +126,8 @@ export default class Config extends Component<ConfigProps, ConfigState> {
     return (
       <>
      
-   
-       <div className="flexbox-container">
+      <div className="center-aligned">
+      <div className="flexbox-container">
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_APP_CONFIG</Heading>
         </div>
@@ -189,13 +188,15 @@ export default class Config extends Component<ConfigProps, ConfigState> {
        </Card>
        
         <SdkApp sdk={this.props.sdk}/>
-        <SdkParams sdk={this.props.sdk}/>
+        {/* <SdkParams sdk={this.props.sdk}/> */}
         <SdkDialog sdk={this.props.sdk}/>
         <SdkNavigator sdk={this.props.sdk}/>
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
         <SdkLocales sdk={this.props.sdk}/>
-        <SdkSpace sdk={this.props.sdk}/>          
+        <SdkSpace sdk={this.props.sdk}/>  
+      </div>
+           
       </>
     );
   }

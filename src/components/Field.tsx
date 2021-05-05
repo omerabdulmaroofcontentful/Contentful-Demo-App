@@ -103,25 +103,27 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
   render() {
 
     return (<>
-      <Card>
-        <div className="flexbox-container">
-          <Icon icon="ReceiptTrimmed" size="large"/>
-          <Heading>LOCATION_ENTRY_FIELD</Heading>
-        </div>
-        <SdkLocation sdk={this.props.sdk}/>
-        <SdkField sdk={this.props.sdk}/>
-        <SdkEditor sdk={this.props.sdk}/>
-        <SdkEntry sdk={this.props.sdk}/>
-        <SdkContentType sdk={this.props.sdk}/>
-        <SdkParams sdk={this.props.sdk}/>
-        <SdkDialog sdk={this.props.sdk}/>
-        <SdkNavigator sdk={this.props.sdk}/>
-        <SdkIds sdk={this.props.sdk}/>
-        <SdkUser sdk={this.props.sdk}/>
-        <SdkLocales sdk={this.props.sdk}/>
-        <SdkSpace sdk={this.props.sdk}/>
-        
-      </Card>
+      <div>
+        <Card>
+          <div className="flexbox-container">
+            <Icon icon="ReceiptTrimmed" size="large"/>
+            <Heading>LOCATION_ENTRY_FIELD</Heading>
+          </div>
+          <SdkLocation sdk={this.props.sdk}/>
+          <SdkField sdk={this.props.sdk}/>
+          <SdkEditor sdk={this.props.sdk}/>
+          <SdkEntry sdk={this.props.sdk}/>
+          <SdkContentType sdk={this.props.sdk}/>
+          <SdkParams sdk={this.props.sdk}/>
+          <SdkDialog sdk={this.props.sdk}/>
+          <SdkNavigator sdk={this.props.sdk}/>
+          <SdkIds sdk={this.props.sdk}/>
+          <SdkUser sdk={this.props.sdk}/>
+          <SdkLocales sdk={this.props.sdk}/>
+          <SdkSpace sdk={this.props.sdk}/>
+          
+        </Card>
+      </div>
     </>
     )
   }
