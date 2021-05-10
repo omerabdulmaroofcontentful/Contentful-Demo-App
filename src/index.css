@@ -13,8 +13,14 @@ div {
 
 
 .normalButton {
-  width: 380px
+  width: 305px
 }
+
+.smallButton {
+  width: 305px;
+  font-size: small;
+}
+
 
 .center-aligned{
   width: 30%;
@@ -29,4 +35,29 @@ div {
 .flexbox-container {
   display: flex;
   flex-direction: row;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px 20px;
+}
+
+.grid-container-dialog {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+  gap: 10px 10px;
+}
+
+.grid-container-field {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 30px 10px;
+}
+
+.divSpacer {
+  padding-bottom:10px;
 }

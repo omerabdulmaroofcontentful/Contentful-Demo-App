@@ -24,7 +24,7 @@ export default class SdkUser extends Component<ConfigProps> {
                                 <br />
                                 <br />
                         <Pill label="sdk.user" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.props.sdk.user} collapsed={0} />
                         </div>
                     </Card>

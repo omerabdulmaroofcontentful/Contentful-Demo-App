@@ -33,27 +33,27 @@ export default class SdkLocales extends Component<ConfigProps,ConfigState> {
                     <br />
 
                     <Pill label="sdk.locales.default"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.state.defaultLocale} collapsed={0}/>
                    </div>
 
                    <Pill label="sdk.locales.available"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.props.sdk.locales.available} collapsed={0}/>
                    </div>
 
                    <Pill label="sdk.locales.fallbacks"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.props.sdk.locales.fallbacks} collapsed={0}/>
                    </div>
 
                    <Pill label="sdk.locales.direction"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.props.sdk.locales.direction} collapsed={0}/>
                    </div>
 
                    <Pill label="sdk.locales.optional"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.props.sdk.locales.optional} collapsed={0}/>
                    </div>
                   </Card>

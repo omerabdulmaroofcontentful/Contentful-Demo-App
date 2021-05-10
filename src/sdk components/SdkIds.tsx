@@ -28,7 +28,7 @@ export default class SdkIds extends Component<ConfigProps,ConfigState> {
                                 <br />
                                 <br />
                         <Pill label="sdk.ids" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.props.sdk.ids} collapsed={0} />
                         </div>
                      

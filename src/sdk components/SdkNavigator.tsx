@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,Tag,Button,TextField } from '@contentful/forma-36-react-components';
+import {Card,Tag,Button, TextInput } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
 
 export interface AppInstallationParameters { }
@@ -68,20 +68,20 @@ export default class SdkNavigator extends Component<ConfigProps,ConfigState> {
                                 <br />
                                 <br />
                         <div>
-                             <TextField className="normalButton" name="entryId" id="entryId" labelText="Entry id" helpText="Please provide entry id" onChange={this.onTextChange} value={this.state.entryId}></TextField>
+                             <TextInput className="normalButton" name="entryId" id="entryId" placeholder="Please provide entry id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
                              <Button className="normalButton" onClick={this.openEntry}>navigator.openEntry(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                            <TextField className="normalButton" name="asset" id="assetId" labelText="Asset id" helpText="Please provide asset id" onChange={this.onTextChange} value={this.state.assetId}></TextField>
+                            <TextInput className="normalButton" name="asset" id="assetId" placeholder="Please provide asset id" onChange={this.onTextChange} value={this.state.assetId}></TextInput>
                              <Button className="normalButton" onClick={this.openAsset}>navigator.openAsset(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                             <TextField className="normalButton" name="entryId" id="newEntryId" labelText="Content Type Id" helpText="Please provide Content Type Id" onChange={this.onTextChange} value={this.state.entryId}></TextField>
-                             <Button className="normalButton" onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
+                             <TextInput className="normalButton" name="entryId" id="newEntryId" placeholder="Please provide Content Type Id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
+                             <Button className="smallButton" onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
                         </div>
                         <br />
                         <br />

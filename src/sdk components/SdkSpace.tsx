@@ -50,19 +50,19 @@ export default class SdkSpace extends Component<ConfigProps,ConfigState> {
                                 <br />
                                 <br />
                         <Pill label="sdk.space.getContentTypes()" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.state.contentTypes} collapsed={0} />
                         </div>
                         <Pill label="sdk.space.getCachedContentTypes()" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.state.cachedContentTypes} collapsed={0} />
                         </div>
                         <Pill label="sdk.space.getUsers()" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.state.users} collapsed={0} />
                         </div>
                         <Pill label="sdk.space.getAllScheduledActions()" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.state.scheduledActions} collapsed={0} />
                         </div>
                     </Card>

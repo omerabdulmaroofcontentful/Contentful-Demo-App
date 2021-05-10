@@ -110,6 +110,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
             <Icon icon="ReceiptTrimmed" size="large"/>
             <Heading>LOCATION_ENTRY_FIELD</Heading>
           </div>
+          <div className="grid-container-field">
           <SdkLocation sdk={this.props.sdk}/>
           <SdkField sdk={this.props.sdk}/>
           <SdkEditor sdk={this.props.sdk}/>
@@ -123,7 +124,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
           <SdkLocales sdk={this.props.sdk}/>
           <SdkSpace sdk={this.props.sdk}/>
           <ThirdPartyAPI sdk={this.props.sdk}/>
-          
+          </div>
         </Card>
       </div>
     </>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Pill, Tag } from '@contentful/forma-36-react-components';
+import { Card, Pill, Tag, Typography } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
 import { locations } from 'contentful-ui-extensions-sdk';
 export interface AppInstallationParameters { }
@@ -73,8 +73,8 @@ export default class SdkLocation extends Component<ConfigProps, ConfigState> {
           <br />
 
           <Pill label="sdk.location.is"/>
-                    <div>
-                        {this.state.location}
+                    <div className="divSpacer">
+                        <Typography>{this.state.location}</Typography>
                     </div>
         </Card>
      

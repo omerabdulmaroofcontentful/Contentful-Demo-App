@@ -42,7 +42,7 @@ export default class Sidebar extends Component<ConfigProps,ConfigState> {
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_ENTRY_SIDEBAR</Heading>
           </div>
-
+        <div className="grid-container-field">
           <SdkLocation sdk={this.props.sdk}/>
           <SdkContentType sdk={this.props.sdk}/>
           <SdkParams sdk={this.props.sdk}/>
@@ -52,6 +52,7 @@ export default class Sidebar extends Component<ConfigProps,ConfigState> {
           <SdkUser sdk={this.props.sdk}/>
           <SdkLocales sdk={this.props.sdk}/>
           <SdkSpace sdk={this.props.sdk}/> 
+          </div>
         </>
     )
   }
