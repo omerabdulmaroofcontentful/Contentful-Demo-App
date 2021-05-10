@@ -44,19 +44,19 @@ export default class SdkEntry extends Component<ConfigProps,ConfigState> {
                    <br />
                    <br />
                    <Pill label="sdk.entry.getSys()" />
-                   <div>
+                   <div className="divSpacer">
                       <ReactJson src={this.props.sdk.entry.getSys()} collapsed={0}/>
                   </div>
                   <Pill label="sdk.entry.onSysChanged(callback): function" />
-                   <div>
+                   <div className="divSpacer">
                       <ReactJson src={this.state.entryChanged} collapsed={0}/>
                   </div>
                   <Pill label="sdk.entry.field[id]" />
-                   <div>
+                   <div  className="divSpacer">
                       <ReactJson src={this.props.sdk.entry.fields["field1"]} collapsed={0}/>
                   </div>
                   <Pill label="sdk.entry.getTasks()" />
-                   <div>
+                   <div  className="divSpacer">
                       <ReactJson src={{}} collapsed={1}/>
                   </div>
               </Card>

@@ -22,11 +22,13 @@ export default class DialogScreen extends Component<DialogProps, ConfigState> {
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_DIALOG</Heading>
         </div>
+        <div className="grid-container-dialog">
         <SdkLocation sdk={this.props.sdk}/>
         <SdkParams sdk={this.props.sdk}/>
         <SdkIds sdk={this.props.sdk}/>
         <SdkUser sdk={this.props.sdk}/>
         <SdkLocales sdk={this.props.sdk}/>
+        </div>
       </Card>
     )
   }

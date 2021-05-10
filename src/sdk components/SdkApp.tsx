@@ -39,15 +39,15 @@ export default class SdkApp extends Component<ConfigProps,ConfigState> {
                    <br />
 
                   <Pill label="sdk.app.getParameters"/>
-                  <div>
+                  <div  className="divSpacer">
                       <ReactJson src={this.state.parameters} collapsed={0}/>
                   </div>
                   <Pill label="sdk.app.getCurrentState"/>
-                  <div>
+                  <div  className="divSpacer">
                       <ReactJson src={this.state.currentState} collapsed={0}/>
                   </div>
                   <Pill label="sdk.app.isInstalled"/>
-                  <div>
+                  <div  className="divSpacer">
                       <ReactJson src={this.state.isInstalled} collapsed={0}/>
                   </div>
                 </Card>

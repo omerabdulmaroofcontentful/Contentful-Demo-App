@@ -40,22 +40,25 @@ export default class Page extends Component<PageProps>{
   render(){
     return (
       <>
-      <div className="center-aligned">
         <Card>
         <div className="flexbox-container">
             <Icon icon="ReceiptTrimmed" size="large"/>
             <Heading>LOCATION_PAGE</Heading>
         </div>
-          <SdkLocation sdk={this.props.sdk}/>
-          <SdkParams sdk={this.props.sdk}/>
-          <SdkDialog sdk={this.props.sdk}/>
-          <SdkNavigator sdk={this.props.sdk}/>
-          <SdkIds sdk={this.props.sdk}/>
-          <SdkUser sdk={this.props.sdk}/>
-          <SdkLocales sdk={this.props.sdk}/>
-          <ThirdPartyAPI sdk={this.props.sdk}/>      
+        <div className="grid-container">
+            <SdkLocation sdk={this.props.sdk}/>
+            <SdkParams sdk={this.props.sdk}/>
+            <SdkIds sdk={this.props.sdk}/>
+            <SdkUser sdk={this.props.sdk}/>
+            <SdkNavigator sdk={this.props.sdk}/>
+            <SdkDialog sdk={this.props.sdk}/>
+
+            
+            <SdkLocales sdk={this.props.sdk}/>
+            <ThirdPartyAPI sdk={this.props.sdk}/>
+          </div>
         </Card>
-      </div>
+
       </>
     )
   }

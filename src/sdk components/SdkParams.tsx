@@ -28,11 +28,11 @@ export default class SdkParams extends Component<ConfigProps,ConfigState> {
                                 <br />
                                 <br />
                         <Pill label="sdk.parameters.installation" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.props.sdk.parameters.installation} collapsed={0} />
                         </div>
                         <Pill label="sdk.parameters.instance" />
-                        <div>
+                        <div className="divSpacer">
                           <ReactJson src={this.props.sdk.parameters.instance} collapsed={0} />
                         </div>
                     </Card>

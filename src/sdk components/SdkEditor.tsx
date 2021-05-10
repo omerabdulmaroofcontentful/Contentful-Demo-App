@@ -40,15 +40,15 @@ export default class SdkEditor extends Component<ConfigProps, ConfigState> {
                    <br />
                    <br />
           <Pill label="sdk.editor.editorInterface" />
-          <div>
+          <div  className="divSpacer">
             <ReactJson src={this.props.sdk.editor.editorInterface} collapsed={0} />
           </div>
           <Pill label="sdk.editor.onLocaleSettingsChanged(callback): function" />
-          <div>
+          <div  className="divSpacer">
             <ReactJson src={this.state.localeUpdatedValue} collapsed={0} />
           </div>
           <Pill label="sdk.editor.onShowDisabledFieldsChanged(callback): function" />
-          <div>
+          <div  className="divSpacer">
             Show disabled fields: {this.state.showDisabledFields}
           </div>
         </Card>

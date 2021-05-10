@@ -61,7 +61,7 @@ export default class SdkField extends Component<ConfigProps,ConfigState> {
                     <br />
 
                     <Pill label="sdk.field"/>
-                    <div>
+                    <div className="divSpacer">
                       <ReactJson src={this.state.field} collapsed={0}/>
                    </div>
 
@@ -69,7 +69,7 @@ export default class SdkField extends Component<ConfigProps,ConfigState> {
                     <TextInput id="input" onChange={this.onChange} value={this.state.fieldValue}></TextInput> 
  
                    <Pill label="sdk.field.removeValue():"/>
-                    <div>
+                    <div className="divSpacer">
                       <Button onClick={this.onClick}>Remove</Button>
                    </div>
 
