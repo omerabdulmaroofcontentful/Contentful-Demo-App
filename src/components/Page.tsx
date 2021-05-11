@@ -52,13 +52,10 @@ export default class Page extends Component<PageProps>{
             <SdkUser sdk={this.props.sdk}/>
             <SdkNavigator sdk={this.props.sdk}/>
             <SdkDialog sdk={this.props.sdk}/>
-
-            
             <SdkLocales sdk={this.props.sdk}/>
             <ThirdPartyAPI sdk={this.props.sdk}/>
           </div>
         </Card>
-
       </>
     )
   }

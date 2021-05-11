@@ -87,19 +87,19 @@ export default class SdkDialog extends Component<ConfigProps,ConfigState> {
                                 <br />
                   
                         <div>
-                          <Button className="normalButton" onClick={this.openCurrentApp}>sdk.dialogs.openCurrentApp</Button>
+                          <Button className="mediumButton" onClick={this.openCurrentApp}>sdk.dialogs.openCurrentApp</Button>
                         </div>
                         <br />
                         <div>
-                          <Button className="normalButton" onClick={this.openCurrent}>sdk.dialogs.openCurrent</Button>
+                          <Button className="mediumButton" onClick={this.openCurrent}>sdk.dialogs.openCurrent</Button>
                         </div>
                         <br />
                         <div>
-                          <Button className="normalButton" onClick={this.openAlert}>sdk.dialogs.openAlert</Button>
+                          <Button className="mediumButton" onClick={this.openAlert}>sdk.dialogs.openAlert</Button>
                         </div>
                         <br />
                         <div>
-                          <Button className="normalButton" onClick={this.openConfirm}>sdk.dialogs.openConfirm</Button>
+                          <Button className="mediumButton" onClick={this.openConfirm}>sdk.dialogs.openConfirm</Button>
                         </div>
                     </Card>
             </>

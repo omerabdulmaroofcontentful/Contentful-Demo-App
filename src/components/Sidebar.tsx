@@ -10,7 +10,7 @@ import SdkLocales from '../sdk components/SdkLocales'
 import SdkSpace from '../sdk components/SdkSpace'
 import SdkContentType from '../sdk components/SdkContentType'
 
-import {Icon,Heading } from '@contentful/forma-36-react-components';
+import {Icon,Heading, AccordionItem, Accordion } from '@contentful/forma-36-react-components';
 
 interface SidebarProps {
   sdk: SidebarExtensionSDK;
@@ -42,17 +42,17 @@ export default class Sidebar extends Component<ConfigProps,ConfigState> {
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_ENTRY_SIDEBAR</Heading>
           </div>
-        <div className="grid-container-field">
-          <SdkLocation sdk={this.props.sdk}/>
-          <SdkContentType sdk={this.props.sdk}/>
-          <SdkParams sdk={this.props.sdk}/>
-          <SdkDialog sdk={this.props.sdk}/>
-          <SdkNavigator sdk={this.props.sdk}/>
-          <SdkIds sdk={this.props.sdk}/>
-          <SdkUser sdk={this.props.sdk}/>
-          <SdkLocales sdk={this.props.sdk}/>
-          <SdkSpace sdk={this.props.sdk}/> 
-          </div>
+          <Accordion>
+            <AccordionItem title="SDK.Location"><SdkLocation sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.CONTENTTYPE"><SdkContentType sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.PARAMS"><SdkParams sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.DIALOG"><SdkDialog sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.NAVIGATOR"><SdkNavigator sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.IDS"><SdkIds sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.USER"><SdkUser sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.LOCALES"><SdkLocales sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.SPACE"> <SdkSpace sdk={this.props.sdk}/> </AccordionItem>
+          </Accordion> 
         </>
     )
   }

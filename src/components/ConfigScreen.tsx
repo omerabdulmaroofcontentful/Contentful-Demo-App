@@ -132,7 +132,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_APP_CONFIG</Heading>
         </div>
-
+        <div className="grid-container-field">
         <SdkLocation sdk={this.props.sdk}/>
 
         <Card>
@@ -197,6 +197,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
         <SdkLocales sdk={this.props.sdk}/>
         <SdkSpace sdk={this.props.sdk}/> 
         <ThirdPartyAPI sdk={this.props.sdk}/> 
+        </div>
       </div>
            
       </>

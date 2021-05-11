@@ -16,11 +16,17 @@ div {
   width: 305px
 }
 
-.smallButton {
-  width: 305px;
-  font-size: small;
+.mediumButton {
+  width: 270px;
 }
 
+.smallSizedButton {
+  width: 305px;
+}
+.smallSizedButton span {
+  width: 305px;
+  font-size: 8pt;
+}
 
 .center-aligned{
   width: 30%;
@@ -39,7 +45,7 @@ div {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 22%;
   grid-template-rows: auto auto auto auto;
   gap: 20px 20px;
 }
@@ -50,6 +56,14 @@ div {
   grid-template-rows: auto auto auto;
   gap: 10px 10px;
 }
+
+.grid-container-half {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  gap: 10px 10px;
+}
+
 
 .grid-container-field {
   display: grid;

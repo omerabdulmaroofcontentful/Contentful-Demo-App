@@ -31,7 +31,7 @@ export default class EditorScreen extends Component<EditorProps> {
           <Icon icon="ReceiptTrimmed" size="large"/>
           <Heading>LOCATION_ENTRY_EDITOR</Heading>
         </div>
-        <div className="grid-container-editor">
+        <div className="grid-container">
           <SdkLocation sdk={this.props.sdk}/>
           <SdkEditor sdk={this.props.sdk}/>
           <SdkEntry sdk={this.props.sdk}/>
