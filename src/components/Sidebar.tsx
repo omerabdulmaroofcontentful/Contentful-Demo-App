@@ -43,7 +43,7 @@ export default class Sidebar extends Component<ConfigProps,ConfigState> {
           <Heading>LOCATION_ENTRY_SIDEBAR</Heading>
           </div>
           <Accordion>
-            <AccordionItem title="SDK.Location"><SdkLocation sdk={this.props.sdk}/></AccordionItem>
+            <AccordionItem title="SDK.LOCATION"><SdkLocation sdk={this.props.sdk}/></AccordionItem>
             <AccordionItem title="SDK.CONTENTTYPE"><SdkContentType sdk={this.props.sdk}/></AccordionItem>
             <AccordionItem title="SDK.PARAMS"><SdkParams sdk={this.props.sdk}/></AccordionItem>
             <AccordionItem title="SDK.DIALOG"><SdkDialog sdk={this.props.sdk}/></AccordionItem>

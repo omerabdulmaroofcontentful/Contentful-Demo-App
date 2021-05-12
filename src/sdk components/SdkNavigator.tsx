@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Card,Tag,Button, TextInput } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
+import {
+  locations
+} from '@contentful/app-sdk'
 
 export interface AppInstallationParameters { }
 
@@ -12,16 +15,23 @@ interface ConfigState {
   entryId:'',
   assetId:'',
   contentTypeId:'',
-
+  className: any ,
 }
 
 
 export default class SdkNavigator extends Component<ConfigProps,ConfigState> {
      constructor(props: any) {
         super(props);
-        this.state = {entryId:'',assetId:'',contentTypeId:''}
+        this.state = {entryId:'',assetId:'',contentTypeId:'', className:''}
 
       }
+
+       componentDidMount = () => {
+          this.setState({className:'smallSizedButton'}) 
+          if(!this.props.sdk.location.is(locations.LOCATION_ENTRY_SIDEBAR)) {
+            this.setState({className:'normalButton'}) 
+          }
+        }
 
       openEntry =(e:any)=>{
         this.props.sdk.navigator.openEntry(this.state.entryId,'')
@@ -68,33 +78,33 @@ export default class SdkNavigator extends Component<ConfigProps,ConfigState> {
                                 <br />
                                 <br />
                         <div>
-                             <TextInput className="normalButton" name="entryId" id="entryId" placeholder="Please provide entry id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
-                             <Button className="normalButton" onClick={this.openEntry}>navigator.openEntry(entryId, options)</Button>
+                             <TextInput className={this.state.className} name="entryId" id="entryId" placeholder="Please provide entry id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
+                             <Button className={this.state.className} onClick={this.openEntry}>navigator.openEntry(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                            <TextInput className="normalButton" name="asset" id="assetId" placeholder="Please provide asset id" onChange={this.onTextChange} value={this.state.assetId}></TextInput>
-                             <Button className="normalButton" onClick={this.openAsset}>navigator.openAsset(entryId, options)</Button>
+                            <TextInput className={this.state.className} name="asset" id="assetId" placeholder="Please provide asset id" onChange={this.onTextChange} value={this.state.assetId}></TextInput>
+                             <Button className={this.state.className} onClick={this.openAsset}>navigator.openAsset(entryId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                             <TextInput className="normalButton" name="entryId" id="newEntryId" placeholder="Please provide Content Type Id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
-                             <Button className="smallButton" onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
+                             <TextInput className={this.state.className} name="entryId" id="newEntryId" placeholder="Please provide Content Type Id" onChange={this.onTextChange} value={this.state.entryId}></TextInput>
+                             <Button className={this.state.className} onClick={this.openNewEntry}>navigator.openNewEntry(contentTypeId, options)</Button>
                         </div>
                         <br />
                         <br />
                         <div>
-                             <Button className="normalButton" onClick={this.openNewAsset}>navigator.openNewAsset(options)</Button>
+                             <Button className={this.state.className} onClick={this.openNewAsset}>navigator.openNewAsset(options)</Button>
                         </div>
                         <br />
                         <div>
-                             <Button className="normalButton" onClick={this.openCurrentAppPage}>navigator.openCurrentAppPage()</Button>
+                             <Button className={this.state.className} onClick={this.openCurrentAppPage}>navigator.openCurrentAppPage()</Button>
                         </div>
                         <br />
                         <div>
-                             <Button className="normalButton" onClick={this.openAppConfig}>navigator.openAppConfig()</Button>
+                             <Button className={this.state.className} onClick={this.openAppConfig}>navigator.openAppConfig()</Button>
                         </div>
                     
                     </Card>
