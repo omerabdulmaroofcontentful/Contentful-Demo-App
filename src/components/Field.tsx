@@ -104,8 +104,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
   render() {
 
     return (<>
-      <div>
-        <Card>
+      <div>    
           <div className="flexbox-container">
             <Icon icon="ReceiptTrimmed" size="large"/>
             <Heading>LOCATION_ENTRY_FIELD</Heading>
@@ -124,8 +123,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
           <SdkLocales sdk={this.props.sdk}/>
           <SdkSpace sdk={this.props.sdk}/>
           <ThirdPartyAPI sdk={this.props.sdk}/>
-          </div>
-        </Card>
+          </div> 
       </div>
     </>
     )
