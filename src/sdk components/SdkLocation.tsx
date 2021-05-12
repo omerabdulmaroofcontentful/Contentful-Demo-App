@@ -32,8 +32,8 @@ export default class SdkLocation extends Component<ConfigProps, ConfigState> {
     if(this.props.sdk.location.is(locations.LOCATION_ENTRY_FIELD)){
       this.setState({location:'locations.LOCATION_ENTRY_FIELD'})
     }
-    if(this.props.sdk.location.is(locations.LOCATION_ENTRY_FIELD_SIDEBAR)){
-      this.setState({location:'locations.LOCATION_ENTRY_FIELD_SIDEBAR'})
+    if(this.props.sdk.location.is(locations.LOCATION_ENTRY_SIDEBAR)){
+      this.setState({location:'locations.LOCATION_ENTRY_SIDEBAR'})
     }
     if(this.props.sdk.location.is(locations.LOCATION_PAGE)){
       this.setState({location:'locations.LOCATION_PAGE'})
