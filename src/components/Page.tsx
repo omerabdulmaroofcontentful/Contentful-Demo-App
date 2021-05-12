@@ -40,12 +40,11 @@ export default class Page extends Component<PageProps>{
   render(){
     return (
       <>
-        <Card>
         <div className="flexbox-container">
             <Icon icon="ReceiptTrimmed" size="large"/>
             <Heading>LOCATION_PAGE</Heading>
         </div>
-        <div className="grid-container">
+        <div className="grid-container-page">
             <SdkLocation sdk={this.props.sdk}/>
             <SdkParams sdk={this.props.sdk}/>
             <SdkIds sdk={this.props.sdk}/>
@@ -55,7 +54,6 @@ export default class Page extends Component<PageProps>{
             <SdkLocales sdk={this.props.sdk}/>
             <ThirdPartyAPI sdk={this.props.sdk}/>
           </div>
-        </Card>
       </>
     )
   }
