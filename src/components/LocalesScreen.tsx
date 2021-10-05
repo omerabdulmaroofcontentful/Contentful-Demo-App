@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { List,ListItem,Pill } from '@contentful/forma-36-react-components';
-import { AppExtensionSDK, PageExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { PageExtensionSDK } from 'contentful-ui-extensions-sdk';
 
 interface ConfigProps {
   sdk: PageExtensionSDK;

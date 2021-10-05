@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, Paragraph,Heading,Icon } from '@contentful/forma-36-react-components';
+import {Card,Heading,Icon } from '@contentful/forma-36-react-components';
 import { DialogExtensionSDK } from 'contentful-ui-extensions-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkParams from '../sdk components/SdkParams'

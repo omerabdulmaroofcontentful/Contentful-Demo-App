@@ -20,10 +20,6 @@ export default class SdkField extends Component<ConfigProps,ConfigState> {
         super(props);
         this.state={field:{},fieldValue:'',fieldValueChanges:''}
 
-        // this.props.sdk.field.onValueChanged('en-GB',(value:any)=>{
-        //   console.log(value)
-        // })
-
       }
       
       async componentDidMount(){
@@ -39,7 +35,6 @@ export default class SdkField extends Component<ConfigProps,ConfigState> {
 
       onChange = (e: any) => {
         const value = e.currentTarget.value;
-        // this.setState({ value });
         if (value) {
           this.props.sdk.field.setValue(value);
         } else {

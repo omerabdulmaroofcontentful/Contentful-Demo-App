@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Icon,Heading,Card, TextInput, Button, Modal,Pill } from '@contentful/forma-36-react-components';
+import {Icon,Heading,Button, Modal } from '@contentful/forma-36-react-components';
 import { FieldExtensionSDK } from 'contentful-ui-extensions-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkEditor from '../sdk components/SdkEditor'
@@ -14,7 +14,6 @@ import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
 import SdkSpace from '../sdk components/SdkSpace'
 import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
-import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
 
 
 interface FieldProps {

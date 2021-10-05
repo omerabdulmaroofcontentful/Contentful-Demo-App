@@ -39,28 +39,6 @@ export default class SdkLocation extends Component<ConfigProps, ConfigState> {
       this.setState({location:'locations.LOCATION_PAGE'})
     }
  
-
-    // switch (this.props.sdk.location) {
-    //   case locations.LOCATION_APP_CONFIG:
-    //     this.setState({ location: 'locations.LOCATION_APP_CONFIG' })
-    //     break;
-    //   case locations.LOCATION_DIALOG:
-    //     this.setState({ location: 'locations.LOCATION_DIALOG' })
-    //     break;
-    //   case locations.LOCATION_ENTRY_EDITOR:
-    //     this.setState({ location: 'locations.LOCATION_ENTRY_EDITOR' })
-    //     break;
-    //   case locations.LOCATION_ENTRY_FIELD:
-    //     this.setState({ location: 'locations.LOCATION_ENTRY_FIELD' })
-    //     break;
-    //   case locations.LOCATION_ENTRY_FIELD_SIDEBAR:
-    //     this.setState({ location: 'locations.LOCATION_ENTRY_FIELD_SIDEBAR' })
-    //     break;
-    //   case locations.LOCATION_PAGE:
-    //     this.setState({ location: 'locations.LOCATION_PAGE' })
-    //     break;
-    // }
-
     console.log('location',this.state.location)
   }
 

@@ -28,12 +28,6 @@ export default class SdkEntry extends Component<ConfigProps,ConfigState> {
 
       async componentDidMount() {
 
-        //TODO: this is currently not working having to check
-        // let tasks = await this.props.sdk.entry.getTasks()
-        //if(tasks)
-        //   this.setState({tasks:JSON.parse(tasks)})
-        // else  
-        // this.setState({tasks:{}})
       }
 
       render(){

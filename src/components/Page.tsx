@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { Card,Icon, Heading, Form, Workbench, Paragraph, Tabs, Tab,FormLabel ,Pill } from '@contentful/forma-36-react-components';
+import { Card,Icon, Heading } from '@contentful/forma-36-react-components';
 import '@contentful/forma-36-react-components/dist/styles.css';
-import { MultipleEntryReferenceEditor } from '@contentful/field-editor-reference';
-import { AppExtensionSDK, PageExtensionSDK } from 'contentful-ui-extensions-sdk';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { css } from 'emotion';
-import Access from './AccessScreen'
-import Locales from './LocalesScreen'
-import Navigator from './NavigatorScreen'
-import Space from './SpaceScreen'
-import User from './UserScreen'
+import { PageExtensionSDK } from 'contentful-ui-extensions-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkParams from '../sdk components/SdkParams'
 import SdkDialog from '../sdk components/SdkDialog'

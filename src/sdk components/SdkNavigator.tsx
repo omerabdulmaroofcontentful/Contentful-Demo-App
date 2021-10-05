@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Card,Tag,Button, TextInput } from '@contentful/forma-36-react-components';
-import ReactJson from 'react-json-view'
 import {
   locations
 } from '@contentful/app-sdk'

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Card,Tag,Pill,Button } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
-const request = require('request');
 
 export interface AppInstallationParameters { }
 
@@ -51,9 +50,6 @@ export default class ThirdPartyAPI extends Component<ConfigProps,ConfigStats> {
 
       }
 
-      // handleJoke(jsondata){
-      //   //this.setState({joke:jsondata})
-      // }
 
       render(){
         return(

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { AppExtensionSDK } from 'contentful-ui-extensions-sdk';
 import 'jsoneditor-react/es/editor.min.css';
-import {Pill,Card,Icon, Heading, Form, Workbench, Paragraph, Tabs, Tab,TextField  } from '@contentful/forma-36-react-components';
+import {Pill,Card,Icon, Heading, Form,TextField  } from '@contentful/forma-36-react-components';
 import JSONInput from 'react-json-editor-ajrm';
 import locale    from 'react-json-editor-ajrm/locale/en';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkApp from '../sdk components/SdkApp'
-import SdkParams from '../sdk components/SdkParams'
 import SdkDialog from '../sdk components/SdkDialog'
 import SdkNavigator from '../sdk components/SdkNavigator'
 import SdkIds from '../sdk components/SdkIds'
@@ -24,24 +23,6 @@ interface ConfigProps {
 interface ConfigState {
   parameters: AppInstallationParameters,
   targetState:any;
-}
-
-const ParametersComponent = (props:any)=>{
-  //console.log('ParametersComponent',JSON.stringify(props))
-
-  const onTextChange= (event:any )=>{
-    event.preventDefault() 
-    props.onParamChange(event)
-  }
-
-  return(
-    <>
-      <Form>
-           <TextField  name="Param 1" id="param1" labelText="Param 1" onChange={onTextChange} value={props.parameters.param1}></TextField>
-           <TextField  name="Param 2" id="param2" labelText="Param 2" onChange={onTextChange} value={props.parameters.param2}></TextField>
-      </Form>
-    </>
-  )
 }
 
 export default class Config extends Component<ConfigProps, ConfigState> {
