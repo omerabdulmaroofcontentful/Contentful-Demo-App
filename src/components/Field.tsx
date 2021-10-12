@@ -14,7 +14,7 @@ import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
 import SdkSpace from '../sdk components/SdkSpace'
 import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
-
+import SdkExplorer from '../sdk components/SdkExplorer'
 
 interface FieldProps {
   sdk: FieldExtensionSDK;
@@ -122,6 +122,7 @@ export default class FieldScreen extends Component<FieldProps, ConfigState> {
           <SdkLocales sdk={this.props.sdk}/>
           <SdkSpace sdk={this.props.sdk}/>
           <ThirdPartyAPI sdk={this.props.sdk}/>
+          <SdkExplorer sdk={this.props.sdk}/>
           </div> 
       </div>
     </>

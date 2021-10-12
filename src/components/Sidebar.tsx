@@ -9,6 +9,7 @@ import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
 import SdkSpace from '../sdk components/SdkSpace'
 import SdkContentType from '../sdk components/SdkContentType'
+import SdkExplorer from '../sdk components/SdkExplorer'
 
 import {Icon,Heading, AccordionItem, Accordion } from '@contentful/forma-36-react-components';
 
@@ -52,6 +53,7 @@ export default class Sidebar extends Component<ConfigProps,ConfigState> {
             <AccordionItem title="SDK.USER"><SdkUser sdk={this.props.sdk}/></AccordionItem>
             <AccordionItem title="SDK.LOCALES"><SdkLocales sdk={this.props.sdk}/></AccordionItem>
             <AccordionItem title="SDK.SPACE"> <SdkSpace sdk={this.props.sdk}/> </AccordionItem>
+            <AccordionItem title="SDK EXPLORER"> <SdkExplorer sdk={this.props.sdk}/> </AccordionItem>
           </Accordion> 
         </>
     )
