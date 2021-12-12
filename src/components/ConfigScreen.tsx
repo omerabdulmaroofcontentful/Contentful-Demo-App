@@ -26,11 +26,14 @@ interface ConfigState {
   targetState:any;
 }
 
+
+
 export default class Config extends Component<ConfigProps, ConfigState> {
   constructor(props: any) {
     super(props);
     this.state = { parameters: {},targetState:{}}; 
     console.log('constructor')
+
     props.sdk.app.onConfigure(() => this.onConfigure());
     this.onParamChange = this.onParamChange.bind(this)
   }
@@ -41,7 +44,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
 
    onParamChange(event:any) {
       
-      //TODO: set state of react dictioary
+     // TODO: set state of react dictioary
       let parameters = JSON.parse(JSON.stringify(this.state.parameters))
       parameters[event.target.id] = event.target.value
       this.setState({parameters:parameters})
@@ -49,31 +52,58 @@ export default class Config extends Component<ConfigProps, ConfigState> {
    }
 
   async componentDidMount() {
-    // Get current parameters of the app.
-    // If the app is not installed yet, `parameters` will be `null`.
-    console.log('componentDidMount')
+  //  Get current parameters of the app.
+    //If the app is not installed yet, `parameters` will be `null`.
+    let isInstalled = await this.props.sdk.app.isInstalled()
+    console.log('componentDidMount',isInstalled)
+
     const parameters:any = await this.props.sdk.app.getParameters();
     const currentState:any = await this.props.sdk.app.getCurrentState();
-    if(parameters){
-      this.setState({parameters:parameters,targetState:currentState})
-      console.log('componentDidMount',JSON.stringify(this.state.parameters))
-      console.log('componentDidMount',JSON.stringify(parameters))
+    this.setState({ parameters:parameters, targetState:currentState }, async () => {
+      // Once preparation has finished, call `setReady` to hide
+      // the loading screen and present the app to a user.
+      console.log('this.setState', parameters,currentState)
       this.props.sdk.app.setReady();
-    }
+    });
+    
+    // const parameters:any = await this.props.sdk.app.getParameters();
+    // const currentState:any = await this.props.sdk.app.getCurrentState();
+    // if(parameters){
+    //   this.setState({parameters:parameters,targetState:currentState})
+    //   console.log('componentDidMount',JSON.stringify(this.state.parameters))
+    //   console.log('componentDidMount',JSON.stringify(parameters))
+    //   this.props.sdk.app.setReady();
+    // }
+
   }
 
   onConfigure = async () => {
 
-    console.log('onConfigure')
+    const currentState = await this.props.sdk.app.getCurrentState();
+
+    console.log('onConfigure',this.state.parameters,this.state.targetState)
+    let localParam = this.state.parameters
+    let targetState = this.state.targetState
     
     setTimeout(function(){
-      window.location.reload()
+        window.location.reload()
     },2000)
-    return {
-      parameters: this.state.parameters,
-      targetState: this.state.targetState
-    };
 
+    if(localParam == null){
+      return {
+        parameters:{key:'hello world'},
+        targetState:{EditorInterface:{
+          ...currentState?.EditorInterface
+        }}
+      }
+    }
+
+    return {
+      parameters:localParam,
+      targetState:{EditorInterface:{
+        ...currentState?.EditorInterface
+      }}
+    }
   };
 
   parametersValueChanged = async (result:any) => {
@@ -108,7 +138,6 @@ export default class Config extends Component<ConfigProps, ConfigState> {
   render() {
     return (
       <>
-     
       <div className="center-aligned">
       <div className="flexbox-container">
           <Icon icon="ReceiptTrimmed" size="large"/>
@@ -169,8 +198,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
                 }}
         />
        </Card>
-       
-        <SdkApp sdk={this.props.sdk}/>
+       <SdkApp sdk={this.props.sdk}/>
         {/* <SdkParams sdk={this.props.sdk}/> */}
         <SdkDialog sdk={this.props.sdk}/>
         <SdkNavigator sdk={this.props.sdk}/>
@@ -180,6 +208,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
         <SdkSpace sdk={this.props.sdk}/> 
         <ThirdPartyAPI sdk={this.props.sdk}/> 
         <SdkExplorer sdk={this.props.sdk}/> 
+
         </div>
       </div>
            
