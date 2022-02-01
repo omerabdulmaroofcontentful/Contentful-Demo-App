@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EditorExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { EditorExtensionSDK } from '@contentful/app-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkEditor from '../sdk components/SdkEditor'
 import SdkEntry from '../sdk components/SdkEntry'
@@ -12,6 +12,8 @@ import SdkUser from '../sdk components/SdkUser'
 import SdkLocales from '../sdk components/SdkLocales'
 import SdkExplorer from '../sdk components/SdkExplorer'
 import ThirdPartyAPI from '../sdk components/ThirdPartyAPI'
+import SdkSpace from '../sdk components/SdkSpace'
+import CMAExplorer from '../sdk components/CMAExplorer'
 import { Card,Icon,Heading } from '@contentful/forma-36-react-components';
 interface EditorProps {
   sdk: EditorExtensionSDK;
@@ -45,6 +47,8 @@ export default class EditorScreen extends Component<EditorProps> {
           <SdkLocales sdk={this.props.sdk}/>
           <ThirdPartyAPI sdk={this.props.sdk}/>
           <SdkExplorer sdk={this.props.sdk}/>
+          <SdkSpace sdk={this.props.sdk}/>
+          <CMAExplorer sdk={this.props.sdk}/>
         </div>
       </Card>
     </>)

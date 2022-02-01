@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Icon,Heading,Button, Modal } from '@contentful/forma-36-react-components';
-import { FieldExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { FieldExtensionSDK }  from '@contentful/app-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkEditor from '../sdk components/SdkEditor'
 import SdkEntry from '../sdk components/SdkEntry'

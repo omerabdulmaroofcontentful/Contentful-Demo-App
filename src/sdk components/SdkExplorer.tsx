@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {Card,Tag,Pill,Autocomplete } from '@contentful/forma-36-react-components';
+import {Card,Tag,Pill,Autocomplete,Note,TextLink } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
 //import Autocomplete from 'react-autocomplete'
-
-export interface AppInstallationParameters { }
 
 interface ConfigProps {
     sdk: any;
@@ -109,6 +107,7 @@ interface ConfigState {
       </Autocomplete>
 
       <ReactJson src={jsonresult} collapsed={1} />
+      <Note>This explorer show few methods, For all supported API endpoints <TextLink target="_blank" href="https://www.contentful.com/developers/docs/extensibility/app-framework/sdk/">visit</TextLink> </Note>
       </>
     );
   }

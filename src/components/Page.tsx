@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card,Icon, Heading } from '@contentful/forma-36-react-components';
 import '@contentful/forma-36-react-components/dist/styles.css';
-import { PageExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { PageExtensionSDK } from '@contentful/app-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkParams from '../sdk components/SdkParams'
 import SdkDialog from '../sdk components/SdkDialog'

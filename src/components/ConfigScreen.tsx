@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { AppExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { AppExtensionSDK } from '@contentful/app-sdk';
 import 'jsoneditor-react/es/editor.min.css';
-import {Pill,Card,Icon, Heading, Form,TextField  } from '@contentful/forma-36-react-components';
+import {Pill,Card,Icon, Heading} from '@contentful/forma-36-react-components';
 import JSONInput from 'react-json-editor-ajrm';
 import locale    from 'react-json-editor-ajrm/locale/en';
 import SdkLocation from '../sdk components/SdkLocation'
@@ -210,8 +210,8 @@ export default class Config extends Component<ConfigProps, ConfigState> {
         <SdkExplorer sdk={this.props.sdk}/> 
 
         </div>
+        <p>App Version 1.0</p>   
       </div>
-           
       </>
     );
   }

@@ -11,7 +11,8 @@ import {
   BaseExtensionSDK,
   init,
   locations
-} from 'contentful-ui-extensions-sdk';
+} from '@contentful/app-sdk';
+import { createClient } from 'contentful-management'
 import '@contentful/forma-36-react-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
 import './index.css';
@@ -23,9 +24,18 @@ import Sidebar from './components/Sidebar';
 import FieldScreen from './components/Field';
 import Dialog from './components/Dialog';
 
-init((sdk: BaseExtensionSDK) => {
+
+ init((sdk: BaseExtensionSDK) => {
   const root = document.getElementById('root');
 
+  // const cma = createClient(
+  //   { apiAdapter: sdk.cmaAdapter },
+  // )
+  
+  // const sdkCMAWrapper = {
+  //   cma: cma,
+  //   sdk:sdk
+  // }
   // All possible locations for your app
   // Feel free to remove unused locations
   // Dont forget to delete the file too :)

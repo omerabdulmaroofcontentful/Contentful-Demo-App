@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Card,Heading,Icon } from '@contentful/forma-36-react-components';
-import { DialogExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { DialogExtensionSDK } from '@contentful/app-sdk';
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkParams from '../sdk components/SdkParams'
 import SdkIds from '../sdk components/SdkIds'

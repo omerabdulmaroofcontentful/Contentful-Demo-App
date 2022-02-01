@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Pill, Tag, Typography } from '@contentful/forma-36-react-components';
 import ReactJson from 'react-json-view'
-import { locations } from 'contentful-ui-extensions-sdk';
+import { locations } from '@contentful/app-sdk';
 export interface AppInstallationParameters { }
 
 interface ConfigProps {

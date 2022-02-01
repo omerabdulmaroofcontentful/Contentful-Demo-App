@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SidebarExtensionSDK } from 'contentful-ui-extensions-sdk';
+import { SidebarExtensionSDK } from '@contentful/app-sdk';
 import SdkParams from '../sdk components/SdkParams'
 import SdkLocation from '../sdk components/SdkLocation'
 import SdkDialog from '../sdk components/SdkDialog'
